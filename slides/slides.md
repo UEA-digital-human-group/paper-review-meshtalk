@@ -249,6 +249,8 @@ they mention face tracker failure?? perhaps when live dubbing?
 
 the autoregressive audio test case could be further exploited to model silence
 
+no rigid pose ?
+
 Note: References of both Sarah, and myself. Spelt my name wrongly!!
 
 --
