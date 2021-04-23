@@ -9,13 +9,20 @@
 
 Alexander Richard, Michael Zollhofer, Yandong Wen, Fernando de la Torre, Yaser Sheikh
 
----
+--
 
 ## Resources
 
 [paper](https://arxiv.org/abs/2104.08223)
 
 [project page](http://www.zollhoefer.com/papers/arXiv21_MeshTalk/page.html)
+
+
+--
+
+## Venue
+
+Arxiv only it appears - not peer reviewed - but a quality lab.
 
 ---
 
