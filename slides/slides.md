@@ -34,7 +34,7 @@ Accurate lip sync, realistic upper facial expression.
 
 Note: No rigid head pose
 
----
+--
 
 #### Prior Work  - Viseme based
 
@@ -43,7 +43,7 @@ Note: No rigid head pose
 - Not a good model of speech
 - Requires considerable labelling of data
 
----
+--
 
 #### Speech-driven 2D talking heads
 
@@ -52,7 +52,7 @@ Note: No rigid head pose
 - Works best on lips - not so good on rest of face.
 - Failures under larger poses.
 
----
+--
 
 #### Speech-driven 3D talking heads
 
@@ -251,6 +251,6 @@ the autoregressive audio test case could be further exploited to model silence
 
 Note: References of both Sarah, and myself. Spelt my name wrongly!!
 
----
+--
 
 # Questions
