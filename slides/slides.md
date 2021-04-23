@@ -130,8 +130,9 @@ Mismatch audio and expression and use a loss function for each zone.
 
 Also, an additional separation for eyelids.
 
-Note: not quite clear on exactly how the training occurs - I assume
-infer one version, then the next version and back prop the weighted sum.
+I don't see how they decide the mask.
+
+Note: not quite clear on exactly how the training occurs - but I think in one shot, with the weights for each region.
 
 --
 
