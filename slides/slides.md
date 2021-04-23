@@ -17,6 +17,7 @@ Alexander Richard, Michael Zollhofer, Yandong Wen, Fernando de la Torre, Yaser S
 
 [project page](http://www.zollhoefer.com/papers/arXiv21_MeshTalk/page.html)
 
+[supp video](https://research.fb.com/wp-content/uploads/2021/04/mesh_talk.mp4)
 
 --
 
