@@ -136,6 +136,10 @@ Note: not quite clear on exactly how the training occurs - but I think in one sh
 
 --
 
+<img src="../assets/fig5.jpg" alt="autoregression" height="360">
+
+--
+
 ## Latent space
 
 Continuous-valued encoding is transformed to categorical representation.
