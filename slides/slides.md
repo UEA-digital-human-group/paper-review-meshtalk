@@ -51,7 +51,7 @@ Note: No rigid head pose
 
 - 3D
 - Speaker specific models can be very realistic (Codec Avatar).
-- Difficult or find or record data
+- Difficult to find or record data
 - Works best on lips - not so good on rest of face.
 - Often no rigid pose.
 
@@ -72,7 +72,23 @@ Blinks, etc. not aligned with speech, are autoregressive.
 - 250 subjects
 - 50 phonetically balanced sentences each
 - 30 fps, 80 cameras, 6k vertices on the mesh
+- audio 16khz
 - 13 hours total
+
+--
+
+Split on sentences for train and testing
+
+- 40 sentences for training
+- 10 sentences for testing
+
+--
+
+## Audio Feature Extraction
+
+80D Mel Spectrogram (Fbank) 10ms window
+
+600ms (-500 to +100) for each mesh
 
 ---
 
@@ -94,6 +110,8 @@ Expression encoder is 3 FNN, 1 LSTM
 
 Decoder is U-Net, to keep close to template identity.
 
+U-Net is FNN and LSTM
+
 --
 
 ## Cross modality loss
@@ -114,6 +132,28 @@ infer one version, then the next version and back prop the weighted sum.
 Continuous-valued encoding is transformed to categorical representation.
 
 Justification refers to the literature, and the need to limit space size.
+
+--
+
+## Latent space
+
+$T \times H \times C$ dimensions
+
+$T$ is a feature sequence 
+
+$H = 64$ categorical head
+
+$C = 128$ categories
+
+--
+
+## Latent space
+
+Continuous values transformed to categories with Gumbel-softmax
+
+They state category space is $C^H$ which is a 135 digit number!
+
+Note: Not quite sure - but I think each sequence forms a category
 
 --
 
@@ -141,11 +181,16 @@ video on project page
 
 ## Latent Space
 
-<img src="../assets/fig4.jpg" alt="autoregression" height="400">
+<img src="../assets/fig4.jpg" alt="autoregression" height="360">
 
 visualisation of latent space activated by modalities
 
 the video includes some evaluations of latent space
+
+Note: Visualization of the latent space. 
+Latent configurations caused by changes in the audio input are clustered together. 
+Latent configurations caused by changes in the expression input form another cluster. 
+Both clusters can be well separated with minimal leakage into each other.
 
 --
 
@@ -153,13 +198,15 @@ the video includes some evaluations of latent space
 
 measurements of lip position compared to ground truth
 
+<img src="../assets/tab2.jpg" alt="quantitative" height="300">
+
 error $\approx 3$ mm
 
 --
 
 ## User study
 
-<img src="../assets/tab3.jpg" alt="autoregression" height="300">
+<img src="../assets/tab3.jpg" alt="user study" height="300">
 
 Method generally preferred over competitor (VOCA).
 
@@ -178,6 +225,24 @@ Again, see the video on the project page.
 
 Note: Retargetting means change the mesh identity for output
 Dubbing means change the speech.
+
+---
+
+## Limitations
+
+100ms look ahead
+
+computationally expensive
+
+they mention face tracker failure?? perhaps when live dubbing?
+
+---
+
+## Thoughts
+
+the autoregressive audio test case could be further exploited to model silence
+
+Note: References of both Sarah, and myself. Spelt my name wrongly!!
 
 ---
 
